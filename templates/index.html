@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diabetes Classification Example</title>
+    <!-- CSS only -->
+ <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="container">
+
+
+
+    <div class="card">
+          <div class="card-header">
+            Diabetes Prediction Application
+          </div>
+          <div class="card-body">
+            <form method="post" action="/predict">
+
+
+                 <div class="mb-3">
+                    <label for="num_lab_procedures" class="form-label">Laboratory Procedures (#)</label>
+                    <input type="number" class="form-control" id="num_lab_procedures" name="num_lab_procedures">
+                </div>
+
+                 <div class="mb-3">
+                    <label for="insulin" class="form-label">Insulin Level Type</label>
+                    <select id="insulin" name="insulin" class="form-control">
+                        <option id="0" value="0">No</option>
+                        <option id="1" value="1">Steady</option>
+                        <option id="2" value="2">Down</option>
+                        <option id="3" value="3">Up</option>
+                    </select>
+                 </div>
+
+                 <div class="mb-3">
+                    <label for="inpatient" class="form-label">Inpatient Visits (#)</label>
+                    <input type="number" class="form-control" name="inpatient" id="inpatient">
+                 </div>
+
+                 <div class="mb-3">
+                    <label for="medications" class="form-label">Medications (#)</label>
+                    <input type="number" class="form-control" name="medications" id="medications">
+                 </div>
+
+                <div class="mb-3">
+                    <label for="time_in_hospital" class="form-label">Time in Hospital</label>
+                    <input type="number" class="form-control" id="time_in_hospital" name="time_in_hospital">
+                 </div>
+
+                   <div class="mb-3">
+                        <label for="number_diagnoses" class="form-label">Number Of Diagnoses</label>
+                        <input type="number" class="form-control" id="number_diagnoses" name="number_diagnoses">
+                     </div>
+
+                 <div class="mb-3">
+                        <label for="num_procedures" class="form-label">Number Of Procedures</label>
+                        <input type="number" class="form-control" id="num_procedures" name="num_procedures">
+                     </div>
+
+                  <div class="mb-3">
+                    <label for="change" class="form-label">Medication Changed</label>
+                    <select id="change" name="change" class="form-control">
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+                    </select>
+                </div>
+                <input type="submit" class="btn btn-lg btn-success float-lg-end" value="Predict Now">
+
+            </form>
+          </div>
+    </div>
+
+
+
+</div>
+
+
+
+<footer>
+    <div class="text-center align-content-center">
+        <small><i>By Morooj Aldeeb & Abrar Alsharidi</i></small>
+    </div>
+</footer>
+<!-- JavaScript Bundle with Popper -->
+<script src="/static/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
